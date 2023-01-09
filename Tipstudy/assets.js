@@ -1,51 +1,54 @@
-        // get references to form and entries element
-        const form = document.querySelector('#entry-form');
-        const entriesElement = document.querySelector('#entries');
-      
-        // add event listener to form to handle submission
-        form.addEventListener('submit', event => {
-          // prevent form submission
-          event.preventDefault();
-      
-          // get values of form fields
-          const title = event.target.elements.title.value;
-          const content = event.target.elements.content.value;
-      
-          // create new entry object
-          const entry = { title, content };
-      
-          // add entry to entries
-          const entries = JSON.parse(localStorage.getItem('entries')) || [];
-          entries.push(entry);
-          localStorage.setItem('entries', JSON.stringify(entries));
-      
-          // clear form fields
-          form.reset();
-      
-          // display entries
-          displayEntries();
-        });
-      
-        // display entries
-        const displayEntries = () => {
-          // get entries from local storage
-          const entries = JSON.parse(localStorage.getItem('entries')) || [];
-      
-          // clear entries element
-          entriesElement.innerHTML = '';
-      
-          // loop through entries and create HTML for each one
-          for (const entry of entries) {
-            const { title, content } = entry;
-            const entryHTML = `
-              <div class="entry">
-                <h3>${title}</h3>
-                <p>${content}</p>
-              </div>
-            `;
-            entriesElement.innerHTML += entryHTML;
-          }
-        }
-      
-        // display entries when page loads
-        displayEntries();
+    // Journal Function
+  
+  function openPopup() {
+    document.getElementById("popup").style.display = "block";
+  }
+  
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+  
+  function submitJournalEntry() {
+    // Get the journal entry from the form
+    var journalEntry = document.getElementById("journal-entry").value;
+    
+    // Send the journal entry to the server or save it locally
+    
+    closePopup();
+  }
+
+
+    // Scroll Function
+
+  window.onscroll = function() {myFunction()};
+  
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+
+
+  // Star Function
+
+  type="text/javascript"
+  function star_function(){
+      let counter = 750;
+      let background = document.querySelector('.background');
+      let i = 0;
+      while (i < counter){
+          let single_star = document.createElement("i");
+          let a = Math.floor(Math.random() * window.innerWidth);
+          let b = Math.floor(Math.random() * window.innerHeight);
+          let time_taken = Math.random() * 10;
+          let overall = Math.random() * 2;
+
+          single_star.style.left = a + 'px';
+          single_star.style.top = b + 'px';
+          single_star.style.width = 1 + overall + 'px';
+          single_star.style.height = 1 + overall + 'px';
+
+          single_star.style.animationDuration = 5 + time_taken + 's';
+          single_star.style.animationDelay = time_taken + 's';
+
+          background.appendChild(single_star);
+          i++;
+      }       
+   }

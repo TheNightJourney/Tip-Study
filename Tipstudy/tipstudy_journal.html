@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https.//fonts.googleapis.com/css">
+    <script src="assets.js"></script>
 </head>
 
 <body>
@@ -30,48 +31,22 @@
         <img src="images/city_silhouette.png" class="city">
     </div>
 
-    <div class="background-journal"></div>
+    <div class="background-journal">
+        <button class="button-journal" onclick="openPopup()">New Entry</button>
 
-  <script>
-  window.onscroll = function() {myFunction()};
-  
-  var header = document.getElementById("myHeader");
-  var sticky = header.offsetTop;
-
-  </script>
-
-    <div class="journal">
-
+    <div id="popup" class="popup">
+    <form id="form" class="form">
+        <br>
+        <label for="journal-entry">今日は何をしましたか？</label><br><br>
+        <textarea class="add-entry" id="journal-entry" rows="6" cols="150"></textarea><br>
+        <button type="submit" onclick="submitJournalEntry()">Submit</button>
+        <button type="button" onclick="closePopup()">Close</button>
+        </form>
     </div>
-  
-    <script type="text/javascript">
-        function star_function(){
-            let counter = 750;
-            let background = document.querySelector('.background');
-            let i = 0;
-            while (i < counter){
-                let single_star = document.createElement("i");
-                let a = Math.floor(Math.random() * window.innerWidth);
-                let b = Math.floor(Math.random() * window.innerHeight);
-                let time_taken = Math.random() * 10;
-                let overall = Math.random() * 2;
-
-                single_star.style.left = a + 'px';
-                single_star.style.top = b + 'px';
-                single_star.style.width = 1 + overall + 'px';
-                single_star.style.height = 1 + overall + 'px';
-
-                single_star.style.animationDuration = 5 + time_taken + 's';
-                single_star.style.animationDelay = time_taken + 's';
-
-                background.appendChild(single_star);
-                i++;
-            }       
-         }
-         star_function()
-    </script>
+    <script>star_function()</script>
     </div>
     
 
 </body>
 </html>
+

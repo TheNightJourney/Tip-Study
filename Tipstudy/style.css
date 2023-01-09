@@ -210,10 +210,59 @@
 
 .background-journal{
   position:absolute; 
-  top: 35%; 
+  top: 30%; 
   left:10%; 
-  background-color:rgba(255,255,255,0.5); 
+  background-color:rgba(255,255,255,0); 
   z-index:1001;
   width: 1200px;
-  height: 500px;
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+}
+
+.button-journal {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 1100px;
+  height: 100px;
+  left: 4.5%;
+  position: absolute;
+  box-shadow: 3px 5px #888888;
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 13.65%;
+  top: 30%;
+  width: 1100px;
+  height: 200px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  box-shadow: 3px 5px #000;
+}
+
+.popup form{
+  margin: auto;
+}
+
+.add-entry{
+  margin: auto;
+  overflow: auto;
+  position:inherit;
+  left: 5%;
+}
+
+.background-journal label{
+  color: white;
+  opacity: 70%;
 }
