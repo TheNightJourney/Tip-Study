@@ -11,10 +11,34 @@
   function submitJournalEntry() {
     // Get the journal entry from the form
     var journalEntry = document.getElementById("journal-entry").value;
+
+  // get the current date and time
+  var date = new Date();
+  var timestamp = date.toString();
+
+  // save the journal entry to local storage
+  localStorage.setItem(timestamp, journalEntry);
     
     // Send the journal entry to the server or save it locally
     
     closePopup();
+  }
+
+  // Recall the Journal
+  function recallEntries() {
+    // get all of the keys in local storage
+  var keys = Object.keys(localStorage);
+  
+  // loop through the keys and retrieve the corresponding journal entries
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    var journalEntry = localStorage.getItem(key);
+
+    // display the journal entry on the page
+    var div = document.createElement('div');
+    div.innerHTML = '<p><strong>' + key + '</strong>: ' + journalEntry + '</p>';
+    document.body.appendChild(div);
+  }
   }
 
 

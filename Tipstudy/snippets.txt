@@ -64,6 +64,63 @@ Load Saves
       
         // display entries when page loads
         displayEntries();
+}
 
+Using PHP for data storage{
+  <form action="save-entry.php" method="post">
+  <textarea name="entry"></textarea>
+  <input type="submit" value="Save">
+</form>
 
+php file:
+<?php
+  // get the journal entry from the form submission
+  $entry = $_POST['entry'];
+
+  // save the journal entry to a file or database here
+  // for example, you might use the file_put_contents() function to write the entry to a text file
+  file_put_contents('journal.txt', $entry, FILE_APPEND);
+?>
+
+}
+
+Whatever This Is{
+  html:
+  <form id="entry-form">
+  <textarea id="entry"></textarea>
+  <input type="button" value="Save" onclick="saveEntry()">
+</form>
+
+  javascript:
+  function saveEntry() {
+  // get the journal entry from the form
+  var entry = document.getElementById('entry').value;
+
+  // get the current date and time
+  var date = new Date();
+  var timestamp = date.toString();
+
+  // save the journal entry to local storage
+  localStorage.setItem(timestamp, entry);
+}
+  
+  recall javascript:
+  function recallEntries() {
+  // get all of the keys in local storage
+  var keys = Object.keys(localStorage);
+
+  // loop through the keys and retrieve the corresponding journal entries
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    var entry = localStorage.getItem(key);
+
+    // display the journal entry on the page
+    var div = document.createElement('div');
+    div.innerHTML = '<p><strong>' + key + '</strong>: ' + entry + '</p>';
+    document.body.appendChild(div);
+  }
+}
+
+Clear Storage{
+  localStorage.clear()
 }
