@@ -24,6 +24,9 @@
     closePopup();
   }
 
+  function clearEntries() {
+        localStorage.clear()}
+
   // Recall the Journal
   function recallEntries() {
     // get all of the keys in local storage
