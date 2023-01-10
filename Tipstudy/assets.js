@@ -1,11 +1,15 @@
     // Journal Function
-  
+
   function openPopup() {
     document.getElementById("popup").style.display = "block";
+    document.getElementById("entrybtn").style.display = "none";
+    document.getElementById("showbtn").style.display = "none";
   }
   
   function closePopup() {
     document.getElementById("popup").style.display = "none";
+    document.getElementById("entrybtn").style.display = "block";
+    document.getElementById("showbtn").style.display = "block";
   }
   
   function submitJournalEntry() {
@@ -24,11 +28,12 @@
     closePopup();
   }
 
-  function clearEntries() {
-        localStorage.clear()}
 
   // Recall the Journal
   function recallEntries() {
+    document.getElementById("entrybtn").style.display = "none";
+    document.getElementById("showbtn").style.display = "none";
+    document.getElementById("data-viz").style.display = "block";
     // get all of the keys in local storage
   var keys = Object.keys(localStorage);
   
@@ -38,9 +43,12 @@
     var journalEntry = localStorage.getItem(key);
 
     // display the journal entry on the page
-    var div = document.createElement('div');
+    // var div = document.createElement('div');
+    // div.innerHTML = '<p><strong>' + key + '</strong>: ' + journalEntry + '</p>';
+    // document.body.appendChild(div);
+    var visualisation = document.getElementById('journal-page');
     div.innerHTML = '<p><strong>' + key + '</strong>: ' + journalEntry + '</p>';
-    document.body.appendChild(div);
+    document.body.appendChild(visualisation);
   }
   }
 
@@ -79,3 +87,12 @@
           i++;
       }       
    }
+
+function clearEntries() {
+  localStorage.clear()
+  location.reload()
+  }
+
+function refreshdaPage() {
+  location.reload()
+}

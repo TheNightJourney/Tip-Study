@@ -20,11 +20,11 @@
       
         <div class="header" id="myHeader">
             <ul class="tabs">
-                <li><a href="#">Journal</a></li>
+                <li><a href="tipstudy_journal.html">Journal</a></li>
                 <li><a href="#">Reminders</a></li>
                 <li><a href="#">Calendar</a></li>
-                <li><button onclick="recallEntries()">Entries</button></li>
-                <li><button onclck"clearEntries()">Clear Entries</button></li>
+                <li><a href="#">Study Resources</a></li>
+                <li><button onclick="clearEntries()">Clear</button></li>
             </ul>
         </div>
 
@@ -34,11 +34,16 @@
     </div>
 
     <div class="background-journal">
-        <button class="button-journal" onclick="openPopup()">New Entry</button>
+        <button class="button-journal" onclick="openPopup()" id="entrybtn">New Entry</button>
+        <br><br><br><br><br><br><br>
+        <button class="show-journal" onclick="recallEntries()" id="showbtn">View Previous Entries</button>
+        <div class="journal-visual" id="data-viz">
+    
+        </div>
     <div id="popup" class="popup">
     <form id="form" class="form">
         <br>
-        <label for="journal-entry">今日は何をしましたか？</label><br><br>
+        <label for="journal-entry">何を勉強していますか？</label><br><br>
         <textarea class="add-entry" id="journal-entry" rows="6" cols="150"></textarea><br>
         <button type="submit" onclick="submitJournalEntry()">Submit</button>
         <button type="button" onclick="closePopup()">Close</button>
