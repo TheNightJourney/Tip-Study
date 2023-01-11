@@ -24,7 +24,6 @@
                 <li><a href="#">Reminders</a></li>
                 <li><a href="#">Calendar</a></li>
                 <li><a href="#">Study Resources</a></li>
-                <li><button onclick="clearEntries()">Clear</button></li>
             </ul>
         </div>
 
@@ -36,9 +35,10 @@
     <div class="background-journal">
         <button class="button-journal" onclick="openPopup()" id="entrybtn">New Entry</button>
         <br><br><br><br><br><br><br>
-        <button class="show-journal" onclick="recallEntries()" id="showbtn">View Previous Entries</button>
+        <button class="show-journal" onclick="recallEntries()" id="showbtn">View Previous Entries<br>==Click Journal to Return!==</button>
+        <br><br><br><br><br><br><br>
+        <button class="show-journal" onclick="clearEntries()" id="delbtn">Clear All Entries</button>
         <div class="journal-visual" id="data-viz">
-    
         </div>
     <div id="popup" class="popup">
     <form id="form" class="form">

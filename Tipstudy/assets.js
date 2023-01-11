@@ -4,12 +4,14 @@
     document.getElementById("popup").style.display = "block";
     document.getElementById("entrybtn").style.display = "none";
     document.getElementById("showbtn").style.display = "none";
+    document.getElementById("delbtn").style.display = "none";
   }
   
   function closePopup() {
     document.getElementById("popup").style.display = "none";
     document.getElementById("entrybtn").style.display = "block";
     document.getElementById("showbtn").style.display = "block";
+    document.getElementById("delbtn").style.display = "block";
   }
   
   function submitJournalEntry() {
@@ -33,22 +35,23 @@
   function recallEntries() {
     document.getElementById("entrybtn").style.display = "none";
     document.getElementById("showbtn").style.display = "none";
+    document.getElementById("delbtn").style.display = "none";
     document.getElementById("data-viz").style.display = "block";
     // get all of the keys in local storage
-  var keys = Object.keys(localStorage);
+    var keys = Object.keys(localStorage);
   
   // loop through the keys and retrieve the corresponding journal entries
-  for (var i = 0; i < keys.length; i++) {
-    var key = keys[i];
-    var journalEntry = localStorage.getItem(key);
+    for (var i = 0; i < keys.length; i++) {
+      var key = keys[i];
+      var journalEntry = localStorage.getItem(key);
 
     // display the journal entry on the page
     // var div = document.createElement('div');
     // div.innerHTML = '<p><strong>' + key + '</strong>: ' + journalEntry + '</p>';
     // document.body.appendChild(div);
-    var visualisation = document.getElementById('journal-page');
-    div.innerHTML = '<p><strong>' + key + '</strong>: ' + journalEntry + '</p>';
-    document.body.appendChild(visualisation);
+      var viz = document.getElementById('data-viz');
+      viz.innerHTML += '<p><strong>' + key + '</strong>: ' + journalEntry + '</p>';
+      document.body.appendChild(viz);
   }
   }
 

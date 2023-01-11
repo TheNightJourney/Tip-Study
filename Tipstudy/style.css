@@ -216,7 +216,7 @@
   z-index:1001;
   width: 80%;
   height: 600px;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -252,7 +252,10 @@
 
 .journal-visual{
   background-color: #fff; 
-  z-index:1001;
+  opacity: 0.6;
+  z-index:1003;
+  top: 40%;
+  left: 16%;
   width: 70%;
   height: 450px;
   overflow-y: auto;
@@ -260,7 +263,9 @@
   margin-left: auto;
   margin-right: auto;
   display: none;
-  position: relative;
+  position: absolute;
+  color: #000;
+  text-align: center;
 }
 
 .button-popup-journal{
@@ -269,8 +274,9 @@
 
 .popup {
   display: none;
-  position: absolute;
+  position: relative;
   z-index: 1;
+  bottom: 25%;
   width: 100%;
   height: 200px;
   overflow: auto;
