@@ -7,6 +7,67 @@
     font-family: Arial, cursive;
 }
 
+#aboutus {
+  margin-top: 130px;
+  margin-left: 150px;
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;
+  width: 550px;
+  height: 340px;
+  opacity: 50%;
+  font-size: 20px;
+}
+
+#members {
+  margin-top: -400px;
+  margin-left: 830px;
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;
+  width: 500px;
+  height: 50px;
+  opacity: 50%;
+  text-align: center;
+  line-height: 14px;
+}
+
+#andrew {
+  margin-top: 35px;
+  margin-left: 830px;
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;
+  width: 500px;
+  height: 130px;
+  opacity: 50%;
+  line-height: 23px;
+}
+
+#azza {
+  margin-top: 30px;
+  margin-left: 830px;
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;
+  width: 500px;
+  height: 130px;
+  opacity: 50%;
+  line-height: 23px;
+}
+
+#felise {
+  margin-top: 30px;
+  margin-left: 830px;
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;
+  width: 500px;
+  height: 130px;
+  opacity: 50%;
+  line-height: 23px;
+}
+
 .body{
     min-height: 200vh;
 }
@@ -86,6 +147,24 @@
     border-radius: 50%;
     background: linear-gradient(#111425, #4e63db);
     background-attachment: fixed;
+}
+
+.binus {
+    position: absolute;
+    top: 210px;
+    left: -390px;
+    width: 100%;
+    z-index: 1000;
+    transform: scale(0.1);
+}
+
+.kono-amigos {
+    position: absolute;
+    top: -80px;
+    left: -200px;
+    width: 100%;
+    z-index: 1000;
+    transform: scale(0.11);
 }
 
 .city
