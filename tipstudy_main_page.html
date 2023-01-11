@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Tipstudy Home Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https.//fonts.googleapis.com/css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="moon"></div>
+        <img src="images/city_silhouette.png" class="city">
+        <ul class="extra-buttons">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cafe Finder</a></li>
+            <li><a href="#">Journal App</a></li>
+            <li><a href="tipstudy_about_us.html">About Us</a></li>
+        </ul>
+        <div class="tipstudy-title">
+            <h1> Tipstudy </h1>
+            <p>to threading your academics together.</p>
+            <br>
+            <a href="tipstudy_journal.html">
+            <button class="button button1">START</button>
+            </a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function star_function(){
+            let counter = 750;
+            let background = document.querySelector('.background');
+            let i = 0;
+            while (i < counter){
+                let single_star = document.createElement("i");
+                let a = Math.floor(Math.random() * window.innerWidth);
+                let b = Math.floor(Math.random() * window.innerHeight);
+                let time_taken = Math.random() * 10;
+                let overall = Math.random() * 2;
+
+                single_star.style.left = a + 'px';
+                single_star.style.top = b + 'px';
+                single_star.style.width = 1 + overall + 'px';
+                single_star.style.height = 1 + overall + 'px';
+
+                single_star.style.animationDuration = 5 + time_taken + 's';
+                single_star.style.animationDelay = time_taken + 's';
+
+                background.appendChild(single_star);
+                i++;
+            }       
+         }
+         star_function()
+    </script>
+    </div>
+
+</body>
+</html>

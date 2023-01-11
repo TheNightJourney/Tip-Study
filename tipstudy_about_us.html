@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Tipstudy About Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https.//fonts.googleapis.com/css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="moon"></div>
+        <ul class="extra-buttons">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cafe Finder</a></li>
+            <li><a href="#">Journal App</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        
+        <!--container for about us-->
+        <div id="aboutus">
+          <h2>About Us</h2>
+          <hr>
+          </br>
+          <p>We are from Kono Amigos Team, consisting Andrew Tanuwijaya, Azza Nasima, and Felise Pandiora as the members. As freshmens at Binus Internasional, we were tasked to make a simple project of our choice using HTML, CSS, and Javascript. After almost half a year, we finally managed to implement what we've learnt so far into this Tipstudy website application, which is a study app that aimed to help people in their studies as well as suggesting the closest appropriate cafes to study in. Please show support for Tipstudy, thank you.</p> 
+        </div>
+        
+        <!--logo images-->
+        <img src="images/binus-logo.png" class="binus">
+        <img src="images/ka-logo.png" class="kono-amigos">
+    
+        <!--container for members' details-->
+        <div id="members">
+          <h2>Members' Details</h2>
+        </div>
+    
+        <!--container for andrew's details-->
+        <div id="andrew">
+          <h3>Andrew Tanuwijaya</h3>
+          <li>NIM    : 2602158216</li>
+          <li>Github : TheNightJourney</li>
+          <li>Email  : andrew.tanuwijaya001@binus.ac.id</li>
+        </div>
+    
+        <!--container for azza's details-->
+        <div id="azza">
+          <h3>Azza Nasima</h3>
+          <li>NIM    : 2602158166</li>
+          <li>Github : azzansm</li>
+          <li>Email  : azza.nasima@binus.ac.id</li>
+        </div>
+        
+        <!--container for felise's details-->
+        <div id="felise">
+          <h3>Felise Pandiora</h3>
+          <li>NIM    : 2602174453</li>
+          <li>Github : FelAmore</li>
+          <li>Email  : felise.pandiora@binus.ac.id</li>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function star_function(){
+            let counter = 750;
+            let background = document.querySelector('.background');
+            let i = 0;
+            while (i < counter){
+                let single_star = document.createElement("i");
+                let a = Math.floor(Math.random() * window.innerWidth);
+                let b = Math.floor(Math.random() * window.innerHeight);
+                let time_taken = Math.random() * 10;
+                let overall = Math.random() * 2;
+
+                single_star.style.left = a + 'px';
+                single_star.style.top = b + 'px';
+                single_star.style.width = 1 + overall + 'px';
+                single_star.style.height = 1 + overall + 'px';
+
+                single_star.style.animationDuration = 5 + time_taken + 's';
+                single_star.style.animationDelay = time_taken + 's';
+
+                background.appendChild(single_star);
+                i++;
+            }       
+         }
+         star_function()
+    </script>
+
+</body>
+</html>
