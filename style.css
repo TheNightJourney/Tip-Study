@@ -165,7 +165,7 @@
 .kono-amigos {
     position: absolute;
     top: -80px;
-    left: -200px;
+    left: -120px;
     width: 100%;
     z-index: 1000;
     transform: scale(0.11);
