@@ -17,10 +17,23 @@
   height: 340px;
   opacity: 50%;
   font-size: 20px;
+  text-align: justify;
+}
+
+#contact {
+  margin-top: 30px;
+  margin-left: 150px;
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;
+  width: 350px;
+  height:90px;
+  opacity: 50%;
+  font-size: 20px;
 }
 
 #members {
-  margin-top: -400px;
+  margin-top: -530px;
   margin-left: 830px;
   border-radius: 25px;
   background: #ffffff;
@@ -147,15 +160,6 @@
     border-radius: 50%;
     background: linear-gradient(#111425, #4e63db);
     background-attachment: fixed;
-}
-
-.binus {
-    position: absolute;
-    top: 210px;
-    left: -390px;
-    width: 100%;
-    z-index: 1000;
-    transform: scale(0.1);
 }
 
 .kono-amigos {
